@@ -1,15 +1,69 @@
 [db]
-constraint_paths = []
-migration_paths = []
-root_paths = []
+constraint_paths = [
+    "db/constraints",
+]
+migration_paths = [
+    "db/migrations",
+]
+root_paths = [
+    "db",
+]
 
 [python]
 allowed_truth_paths = []
 
+[queues]
+adapter_paths = []
+client_markers = [
+    "rdkafka",
+    "kafkajs",
+    "tansu",
+    "iggy",
+    "fluvio",
+    "nats",
+    "redis streams",
+]
+event_contract_paths = []
+generated_type_paths = []
+
 [rust]
-domain_paths = ["src", "crates/domain"]
-forbidden_domain_imports = ["std::fs", "std::env", "std::net", "std::time::SystemTime", "rand::", "sqlx::", "diesel::", "reqwest::"]
+domain_paths = [
+    "src",
+    "crates/domain",
+]
+forbidden_domain_imports = [
+    "std::fs",
+    "std::env",
+    "std::net",
+    "std::time::SystemTime",
+    "rand::",
+    "sqlx::",
+    "diesel::",
+    "reqwest::",
+    "rdkafka::",
+    "tracing::",
+    "log::",
+]
 
 [stack]
 id = "rust-split-family-child"
 version = "1.0.0"
+
+[[streaming_exception]]
+classification = "brownfield"
+expires = "2026-12-31"
+migration_path = "Keep Rust control-plane code behind typed boundaries and audit receipts; add generated contracts before any cross-runtime expansion."
+owner = "platform"
+runtime = "filesystem"
+
+[typescript]
+forbidden_web_imports = [
+    "sqlx",
+    "pg",
+    "postgres",
+    "mysql",
+    "better-sqlite3",
+    "@aws-sdk/client-s3",
+]
+generated_contract_paths = []
+web_paths = []

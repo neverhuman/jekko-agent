@@ -20,6 +20,8 @@
     "crates/domain/": "workspace",
     "crates/domain/AGENTS.md": "agent",
     "crates/domain/Cargo.toml": "workspace"
+    ,"contracts/": "contracts",
+    "db/": "data"
   },
   "workspace": "jekko-agent"
 }

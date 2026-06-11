@@ -79,6 +79,14 @@
     "crates/domain/Cargo.toml": {
       "command": "just test",
       "purpose": "verify domain crate manifest stays compiled"
+    },
+    "contracts/": {
+      "command": "jankurai audit . --mode advisory --json target/jankurai/repo-score.json --md target/jankurai/repo-score.md",
+      "purpose": "verify contract drift checks and contract skeletons stay visible"
+    },
+    "db/": {
+      "command": "jankurai doctor --fail-on critical",
+      "purpose": "verify database skeletons stay visible to the audit"
     }
   }
 }
