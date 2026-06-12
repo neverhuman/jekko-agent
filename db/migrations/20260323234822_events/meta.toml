@@ -1,0 +1,7 @@
+owner = "db-support"
+approval = "split-port support-copy approved for local audit"
+rollback = "restore from backup or roll forward with a reviewed corrective migration"
+backup = "portal migration history is preserved before split synchronization"
+lock_timeout = "documented support-copy posture"
+statement_timeout = "documented support-copy posture"
+verify = "bash scripts/ci-local.sh and Jankurai score mirroring"
