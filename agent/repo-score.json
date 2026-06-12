@@ -1,7 +1,7 @@
 {
-  "report_fingerprint": "sha256:22591975b76cff35fd13806687b34db75c7a411de9adefc51f6ecc54e4bd9257",
-  "input_fingerprint": "sha256:f99fac99d67ce29917681a8b02c6daadce01c03775022827130990a073a927e0",
-  "policy_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "report_fingerprint": "sha256:199574909468fe1665d9e03ee4ffcde52cd1e4c3aadf0bd859c22422e2b94b6b",
+  "input_fingerprint": "sha256:707694b6cc360fc4efd85ba337763de91ecbc18a6812df3d6a396b8e85b0ed7a",
+  "policy_fingerprint": "sha256:d3d4e9216bf89c824b97191fc7df61ec421867dd5fd0d7a6c3fb33527d0b403a",
   "manifest_fingerprints": {
     "owner_map": "sha256:7171b59edefff80a3bf0ba94af561a0385a4c1f3bdf80723cb722ad29d52f71a",
     "test_map": "sha256:19c9922d877ea1d58ca7cdb13e394515c55d62b55a42b484f4942c221836587f",
@@ -10,7 +10,7 @@
     "standard_version": "sha256:27e5d92b64d86aacffcf8461e47e810188bca4716aaa6a2d1f74140d65ad220e"
   },
   "dirty_worktree": true,
-  "generated_at": "1781216503",
+  "generated_at": "1781223424",
   "schema_url": "schemas/repo-score.schema.json",
   "standard": "jankurai",
   "standard_version": "0.9.0",
@@ -24,9 +24,9 @@
   "conformance_decision": "pass",
   "conformance_blockers": [],
   "repo": ".",
-  "run_id": "1781216503",
-  "started_at": "1781216503",
-  "elapsed_ms": 74,
+  "run_id": "1781223424",
+  "started_at": "1781223424",
+  "elapsed_ms": 265,
   "scope": {
     "mode": "full",
     "paths": []
@@ -53,7 +53,7 @@
     }
   },
   "git": {
-    "head": "43f04e3",
+    "head": "429b39a",
     "base": null,
     "changed_files": 0,
     "mode": "full",
@@ -445,14 +445,19 @@
     "has_rendered_ux_lane": true,
     "missing_categories": [],
     "evidence": {
-      "accessibility": [],
+      "accessibility": [
+        "agent/repo-score.json",
+        "agent/repo-score.md"
+      ],
       "api_mocks": [],
       "artifact_backed_proof": [],
       "design_tokens": [],
       "geometry_runtime": [],
       "layout_stability": [],
       "playwright_visual": [],
-      "storybook": [],
+      "storybook": [
+        "agent/repo-score.json"
+      ],
       "visual_review": []
     }
   },
@@ -990,7 +995,7 @@
   "copy_code": {
     "schema_version": "1.1.0",
     "generated_by": "jankurai copy-code",
-    "generated_at": "2026-06-11T22:21:43.418696966+00:00",
+    "generated_at": "2026-06-12T00:17:03.855841990+00:00",
     "repo": ".",
     "auditor_version": "1.6.10",
     "status": "review",
@@ -1028,7 +1033,7 @@
       ]
     },
     "summary": {
-      "files_scanned": 54,
+      "files_scanned": 55,
       "files_considered": 2,
       "active_files": 2,
       "exact_file_classes": 0,
